@@ -32,10 +32,6 @@ const userSchema = new Schema({
     type: String, 
     default: ""
   },
-role: { type: String,
-  enum: ['tenant', 'landlord', 'Landlord'],
-   default: "User",
- },
  phoneNumber: {
     type: String,
     unique: true,

@@ -27,7 +27,7 @@ const register = async(req, res)=>{
 //if(duplicate) return res.sendStatus(409)
       //hashe the password and set new password to be hashed password
       const hashedPassword = await bcrypt.hash(password, 12)
-      const User = new Users({firstname, lastname, email, password: hashedPassword, role, phoneNumber, emailToken: crypto.randomBytes(64).toString("hex"),
+      const User = new Users({firstname, lastname, email, password: hashedPassword, phoneNumber, emailToken: crypto.randomBytes(64).toString("hex"),
       })
       await User.save()
 
@@ -40,7 +40,6 @@ const register = async(req, res)=>{
                      firstname,
                      lastname,
                      email,
-                     role,
                      phoneNumber,
                      passToken}    
       })  
