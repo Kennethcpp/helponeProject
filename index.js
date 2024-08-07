@@ -19,9 +19,10 @@ const PORT = process.env.PORT || 1900
 
 dbconnection()   
 
-app.get("/home", (req, res)=>{
-    return res.sendFile("index.html", {root:__dirname})
+app.get("/", (req, res)=>{
+    return res.status(200).json({message: "Help one platform, Together we can change the world!"})
 })
+ 
 app.listen(PORT, ()=>{
     console.log(`server is running on https://localhost:${PORT}`)
 })
