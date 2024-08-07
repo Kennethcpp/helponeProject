@@ -4,8 +4,8 @@ window.addEventListener("DOMContentLoaded", async () => {
       form.addEventListener("submit", async (e) => {
         e.preventDefault();
         
-        const firstname = document.getElementById("fname").value;
-        const lastname = document.getElementById("lname").value;
+        const firstname = document.getElementById("firstname").value;
+        const lastname = document.getElementById("lastname").value;
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
         const phoneNumber = document.getElementById("phoneNumber").value;
